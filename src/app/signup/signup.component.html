@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Signup page</h2>
+
+    <form  (ngSubmit)="signup(name,email,password,verifypassword)">
+        <div class="mb-3">
+        <label for="name" class="form-label">Enter Name</label>
+        <input type="name" class="form-control" name="name" id="name" #name>
+        </div>
+        <div class="mb-3">
+            <label for="userrname" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="username" id="username" aria-describedby="emailHelp" #email>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+        <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" id="password" placeholder="password" #password>
+        </div>
+        <div class="mb-3">
+            <label for="verifypassword" class="form-label">verify Password</label>
+            <input type="password" class="form-control" name="verifypassword" id="verifypassword" placeholder="verifypassword" #verifypassword>
+            </div>
+        <button type="button" class="btn btn-primary">Submit</button>
+    </form>
+    <p>Already have an Account? <a routerLink="">Login</a></p>
+
+</div>

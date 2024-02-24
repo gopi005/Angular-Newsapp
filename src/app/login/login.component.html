@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>login page</h2>
+
+    <form>
+        <div class="mb-3">
+        <label for="userrname" class="form-label">Email address</label>
+        <input type="email" class="form-control" name="username" id="username" aria-describedby="emailHelp" #username>
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" id="password" #password>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="login(username,password)">Submit</button>
+    </form>
+    <p>Dont have an Account? <a routerLink="signup">signup</a></p>
+
+</div>

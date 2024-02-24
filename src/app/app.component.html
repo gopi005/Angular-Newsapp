@@ -1,0 +1,109 @@
+
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo me-auto"><a href="index.html">GNEWS</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <a href="portfolio-details.html" class="logo me-auto"><img src="assets/nike.jpg" alt="" class="img-fluid"></a>
+    <!-- dropdown code -->
+    <div class="navbar1">
+      <div class="dropdown1">
+        <button class="dropbtn1">PUBLISHERS 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown1-content">
+          <div class="header1">
+            <h2>CHANNELS</h2>
+          </div>
+          <div class="row1">
+            <div class="column1">
+              <h3>UNITED STATE</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+            <div class="column1">
+              <h3>INDIAN</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+            <div class="column1">
+              <h3>UAE</h3>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- dropdown ends -->
+    <nav id="navbar" class="navbar">
+
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">English</a></li>
+        <li><a href="project.html">Tamil</a></li>
+        <li><a href="portfolio.html">Hindi</a></li>
+        <li><a href="resume.html">Telugu</a></li>
+
+        <li><a href="index.html" class="getstarted">Subscribe</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
+<br><br><br>
+<!-- display cards using angular Gnews api -->
+<div class="card-container">
+<div class="card-group">
+<div class="news-card" *ngFor="let x of news">
+  <div class="card1sssssss" >
+    <img class="news-card img" src="{{x.image}}" alt="Card image cap">
+      <div class="news-content">
+        <h5 class="news-title ">{{x.title}}</h5>
+        <p class="news-description">{{x.description}}</p>
+        <p class="card-text"><small class="text-muted">{{x.publishedAt | date:"short"}}</small></p>
+        <a href="{{x.url}}" class="read-more">More...</a>
+      </div>
+    </div>
+  </div>
+  </div>
+<!-- end of card -->
+<!-- page no -->
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- end of page no -->
+  <!-- catogry:<input type="text" [(ngModule)]="category">
+region:<input type="text" [(ngModule)]="apikey"><br> -->
+<br><br><br>
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- <div class="card" style="width: 18rem;" *ngFor="let x of news">
+  <img class="card-img-top" src="{{x.image}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{x.title}}</h5>
+    <p class="card-text">{{x.description}}</p>
+    <p class="card-text"><small class="text-muted">{{x.publishedAt}}</small></p>
+
+    <a href="{{x.url}}" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->
